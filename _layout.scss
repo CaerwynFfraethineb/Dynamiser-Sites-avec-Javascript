@@ -1,0 +1,19 @@
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .img-pub {
+        width: 70%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 972px) and (orientation: landscape) {
+    .img-pub {
+        width: 35vw;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 973px) {
+    .img-pub {
+        width: 25vw;
+        height: auto;
+    }
+}

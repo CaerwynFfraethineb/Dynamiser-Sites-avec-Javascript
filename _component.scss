@@ -1,0 +1,22 @@
+$border-color: rgb(200,200,200);
+$border-shadow-color: rgb(220,220,220);
+$game-color: rgba(195, 0, 23, 0.8)
+$game-font-family: 'Quicksand', sans-serif;
+$game-font-size: 1rem;
+$game-font-size-titles: 1.2rem;
+
+.border-c {
+    border: 0.5rem outset $border-color;
+    box-shadow: 0 0 0 0.5rem $border-shadow-color;
+    border-radius: 12px;
+  }
+
+.game-style {
+  background-color: $game-color;
+  font-family: $game-font-family;
+}
+
+.game-titles {
+  font-family: $game-font-family;
+  font-size: $game-font-size-titles;
+}
