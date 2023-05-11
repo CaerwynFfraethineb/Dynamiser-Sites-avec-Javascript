@@ -24,20 +24,32 @@
 // Affichage des scores Round et global en temps réel
 // Noms de variables round et global
 
-class player1 {
+class player {
     constructor(scoreRound, scoreGlobal, active) {
         this.scoreRound = scoreRound
         this.scoreGlobal = scoreGlobal
         this.active = active
     }
 }
-let player1 = new player1(0, 0, true)
+let player1 = new player(0, 0, true)
+let player2 = new player(0, 0, false)
 
-class player2 {
-    constructor(scoreRound, scoreGlobal, active) {
-        this.scoreRound = scoreRound
-        this.scoreGlobal = scoreGlobal
-        this.active = active
-    }
+/* */
+let newGame = document.querySelector('#ng-btn');
+function restart() {
+    player1 = (0, 0, true)
+    player2 = (0, 0, false)
 }
-let player2 = new player2(0, 0, false)
+btn.addEventListener('click', restart)
+
+function rollDice() {
+    var diceRandom = Math.floor(Math.random() * 6 + 1);
+        if (diceRandom === 1) {
+            diceRandom = 0
+            this.scoreRound = 0
+            alert("Raté ! Joueur suivant !")
+        } else {
+            this.scoreRound = this.scoreRound + diceRandom
+            alert("Bien joué ! Continuer ou jouer la sécurité ?")
+        }
+}
