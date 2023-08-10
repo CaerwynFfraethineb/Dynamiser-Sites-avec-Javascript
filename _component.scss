@@ -1,6 +1,6 @@
 $border-color: rgb(200,200,200);
 $border-shadow-color: rgb(220,220,220);
-$game-color: rgba(195, 0, 23, 0.8)
+$game-color: rgba(195, 0, 23, 0.2);
 $game-font-family: 'Quicksand', sans-serif;
 $game-font-size: 1rem;
 $game-font-size-titles: 1.2rem;
@@ -19,4 +19,25 @@ $game-font-size-titles: 1.2rem;
 .game-titles {
   font-family: $game-font-family;
   font-size: $game-font-size-titles;
+}
+
+.btn-style {
+	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	border-radius:10px;
+	border:1px solid #ffffff;
+	color:#ffffff;
+	font-family: $game-font-family;
+	font-size:18px;
+	font-weight:bold;
+	padding:5px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.btn-style:hover {
+	background-color:#be554e;
+}
+.btn-style:active {
+	position:relative;
+	top:1px;
 }

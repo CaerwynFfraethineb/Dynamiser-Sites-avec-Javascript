@@ -24,6 +24,17 @@
 // Affichage des scores Round et global en temps réel
 // Noms de variables round et global
 
+
+/* Init classes */
+
+const gameDiv = document.getElementById("game");
+let scoreOne = document.getElementById("score-1");
+let scoreTwo = document.getElementById("score-2");
+let currentOne = document.getElementById("current-1");
+let currentTwo = document.getElementById("current-2");
+let imageDice = document.getElementById("img-dice");
+
+
 class player {
     constructor(scoreRound, scoreGlobal, active) {
         this.scoreRound = scoreRound
@@ -34,15 +45,19 @@ class player {
 let player1 = new player(0, 0, true)
 let player2 = new player(0, 0, false)
 
-/* */
-let newGame = document.querySelector('#ng-btn');
+/* Button & Function NewGame */
+let newGame = document.getElementById("ng-btn");
 function restart() {
     player1 = (0, 0, true)
     player2 = (0, 0, false)
+    alert("new game");
 }
-btn.addEventListener('click', restart)
+newGame.addEventListener('click', restart)
 
-function rollDice() {
+/* Button & Function RollDice */
+
+let rollDice = document.getElementById("roll-btn")
+function rollD() {
     var diceRandom = Math.floor(Math.random() * 6 + 1);
         if (diceRandom === 1) {
             diceRandom = 0
@@ -53,3 +68,27 @@ function rollDice() {
             alert("Bien joué ! Continuer ou jouer la sécurité ?")
         }
 }
+rollDice.addEventListener('click', rollD)
+
+switch (imageDice) {
+    case valeur1:
+        imageDice
+        break;
+}
+
+/* Button & Function Hold */
+
+
+
+/* Algo Win & window alert */
+
+/* Function dice 1-6  */
+
+let diceImg = document.querySelector("#dice");
+dice
+
+
+scoreOne.innerHTML = player1.scoreRound;
+scoreTwo.innerHTML = player2.scoreRound;
+currentOne.innerHTML = player1.scoreGlobal;
+currentTwo.innerHTML = player2.scoreGlobal;
