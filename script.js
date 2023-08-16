@@ -32,7 +32,7 @@ let scoreOne = document.getElementById("score-1");
 let scoreTwo = document.getElementById("score-2");
 let currentOne = document.getElementById("current-1");
 let currentTwo = document.getElementById("current-2");
-let imageDice = document.getElementById("img-dice");
+// let imageDice = document.getElementById("img-dice");
 
 
 class player {
@@ -45,9 +45,12 @@ class player {
 let player1 = new player(0, 0, true)
 let player2 = new player(0, 0, false)
 
+scoreOne = this.player1.scoreRound;
+scoreTwo = 
+
 /* Button & Function NewGame */
 let newGame = document.getElementById("ng-btn");
-function restart() {
+function () {
     player1 = (0, 0, true)
     player2 = (0, 0, false)
     alert("new game");
@@ -59,33 +62,70 @@ newGame.addEventListener('click', restart)
 let rollDice = document.getElementById("roll-btn")
 function rollD() {
     var diceRandom = Math.floor(Math.random() * 6 + 1);
-        if (diceRandom === 1) {
-            diceRandom = 0
-            this.scoreRound = 0
-            alert("Raté ! Joueur suivant !")
-        } else {
-            this.scoreRound = this.scoreRound + diceRandom
-            alert("Bien joué ! Continuer ou jouer la sécurité ?")
+        if (player1.active = true) {
+            if (diceRandom === 1) {
+                this.scoreRound = 0
+                this.active = false
+            } else {
+                this.scoreRound = this.scoreRound + diceRandom
+            }
+        } else if (player2.active = true) {
+            if (diceRandom === 1) {
+                this.scoreRound = 0
+                this.active = false
+            } else {
+                this.scoreRound = this.scoreRound + diceRandom
+            }
         }
 }
 rollDice.addEventListener('click', rollD)
 
-switch (imageDice) {
-    case valeur1:
-        imageDice
+function changeDice () {
+    var imgDice = document.getElementById("dice");
+    var condition = "diceRandom";
+}
+
+switch (condition) {
+    case 1:
+        imgDice.src = "img/dice1.png";
+        alert("Raté ! Joueur suivant !")
+        break;
+    case 2:
+        imgDice.src = "img/dice2.png";
+        alert("Bien joué ! Continuer ou jouer la sécurité ?")
+        break;
+    case 3:
+        imgDice.src = "img/dice3.png";
+        alert("Bien joué ! Continuer ou jouer la sécurité ?")
+        break;
+    case 4:
+        imgDice.src = "img/dice4.png";
+        alert("Bien joué ! Continuer ou jouer la sécurité ?")
+        break;
+    case 5:
+        imgDice.src = "img/dice5.png";
+        alert("Bien joué ! Continuer ou jouer la sécurité ?")
+        break;
+    case 6:
+        imgDice.src = "img/dice6.png";
+        alert("Bien joué ! Continuer ou jouer la sécurité ?")
+        break;
+    default
+        imgDice.src = "img/dice1.png";
         break;
 }
 
 /* Button & Function Hold */
 
-
+let holdPress = document.getElementById("hold-btn");
+function () {
+    this.player1. = (0, 0, true)
+    player2 = (0, 0, false)
+    alert("new game");
+}
+newGame.addEventListener('click', restart)
 
 /* Algo Win & window alert */
-
-/* Function dice 1-6  */
-
-let diceImg = document.querySelector("#dice");
-dice
 
 
 scoreOne.innerHTML = player1.scoreRound;
