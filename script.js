@@ -24,16 +24,10 @@
 // Affichage des scores Round et global en temps réel
 // Noms de variables round et global
 
-
-/* Init classes */
-
-const gameDiv = document.getElementById("game");
-let scoreOne = document.getElementById("score-1");
-let scoreTwo = document.getElementById("score-2");
-let currentOne = document.getElementById("current-1");
-let currentTwo = document.getElementById("current-2");
-// let imageDice = document.getElementById("img-dice");
-
+let scoreOne = document.getElementById("score-1")
+let scoreTwo = document.getElementById("score-2")
+let currentOne = document.getElementById("current-1")
+let currentTwo = document.getElementById("current-2")
 
 class player {
     constructor(scoreRound, scoreGlobal, active) {
@@ -45,88 +39,75 @@ class player {
 let player1 = new player(0, 0, true)
 let player2 = new player(0, 0, false)
 
-scoreOne = this.player1.scoreRound;
-scoreTwo = 
+scoreOne = player1.scoreRound
+scoreTwo = player2.scoreRound
+currentOne = player1.scoreGlobal
+currentTwo = player2.scoreGlobal
 
-/* Button & Function NewGame */
-let newGame = document.getElementById("ng-btn");
-function () {
+const newGame = document.getElementById("ng-btn")
+newGame.addEventListener("click", function () {
     player1 = (0, 0, true)
     player2 = (0, 0, false)
-    alert("new game");
-}
-newGame.addEventListener('click', restart)
+    alert("On recommence à zéro !");
+});
 
-/* Button & Function RollDice */
-
-let rollDice = document.getElementById("roll-btn")
-function rollD() {
-    var diceRandom = Math.floor(Math.random() * 6 + 1);
-        if (player1.active = true) {
+let diceRandom;
+const rollDice = document.getElementById("roll-btn")
+rollDice.addEventListener("click", function () {
+    diceRandom = Math.floor(Math.random() * 6 + 1);
+        if (player1.active === true) {
             if (diceRandom === 1) {
-                this.scoreRound = 0
-                this.active = false
+                player1.scoreRound = 0
+                player1.active = !player1.active
+                player2.active = !player2.active
             } else {
-                this.scoreRound = this.scoreRound + diceRandom
+                player1.scoreRound = player1.scoreRound + diceRandom;
             }
-        } else if (player2.active = true) {
+        } else if (player2.active === true) {
             if (diceRandom === 1) {
-                this.scoreRound = 0
-                this.active = false
+                player2.scoreRound = 0
+                player2.active = !player2.active
+                player1.active = !player1.active
             } else {
-                this.scoreRound = this.scoreRound + diceRandom
+                player2.scoreRound = player2.scoreRound + diceRandom;
             }
         }
-}
-rollDice.addEventListener('click', rollD)
+});
 
-function changeDice () {
-    var imgDice = document.getElementById("dice");
-    var condition = "diceRandom";
-}
-
-switch (condition) {
-    case 1:
-        imgDice.src = "img/dice1.png";
-        alert("Raté ! Joueur suivant !")
+let imageDice = document.getElementById("img-dice");
+switch (diceRandom) {
+    case "1":
+        imageDice.src = "img/dice1.png";
+        alert("Raté ! Joueur suivant !");
         break;
-    case 2:
-        imgDice.src = "img/dice2.png";
-        alert("Bien joué ! Continuer ou jouer la sécurité ?")
+    case "2":
+        imageDice.src = "img/dice2.png";
         break;
-    case 3:
-        imgDice.src = "img/dice3.png";
-        alert("Bien joué ! Continuer ou jouer la sécurité ?")
+    case "3":
+        imageDice.src = "img/dice3.png";
         break;
-    case 4:
-        imgDice.src = "img/dice4.png";
-        alert("Bien joué ! Continuer ou jouer la sécurité ?")
+    case "4":
+        imageDice.src = "img/dice4.png";
         break;
-    case 5:
-        imgDice.src = "img/dice5.png";
-        alert("Bien joué ! Continuer ou jouer la sécurité ?")
+    case "5":
+        imageDice.src = "img/dice5.png";
         break;
-    case 6:
-        imgDice.src = "img/dice6.png";
-        alert("Bien joué ! Continuer ou jouer la sécurité ?")
+    case "6":
+        imageDice.src = "img/dice6.png";
         break;
-    default
-        imgDice.src = "img/dice1.png";
+    default:
+        imageDice.src = "img/dice1.png";
         break;
 }
 
-/* Button & Function Hold */
-
-let holdPress = document.getElementById("hold-btn");
-function () {
-    this.player1. = (0, 0, true)
-    player2 = (0, 0, false)
-    alert("new game");
-}
-newGame.addEventListener('click', restart)
-
-/* Algo Win & window alert */
-
+const holdPress = document.getElementById("hold-btn");
+newGame.addEventListener("click", function () {
+    player1 = player1.scoreGlobal = player1.scoreRound;
+    player1.scoreRound = 0
+    player2 = player2.scoreGlobal = player2.scoreRound;
+    player2.scoreRound = 0
+    alert("Changement de joueur !");
+});
 
 scoreOne.innerHTML = player1.scoreRound;
 scoreTwo.innerHTML = player2.scoreRound;
