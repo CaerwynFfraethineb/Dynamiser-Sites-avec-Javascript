@@ -54,26 +54,34 @@
                 <img src="img/pen2.png" alt="pen" class="img-fluid pb-3"">
             </div>
         </div>
-        <div class="container game-style mx-2 my-2 px-2 py-2 text-center justify-content-center">
+        <div class="container-fluid game-style mx-2 my-2 px-2 py-3 text-center">
             <div class="row py-3">
                 <h1 class="font-weight-bold game-font game-titles">Mon jeu de dés</h1>
             </div>
-            <div class="row my-5 py-5 text-center">
-                <col class="col">
+            <div class="row my-2 py-2 text-center align-items-center justify-content-center">
+                <div class="col">
                     <img src="img/NG.png" alt="newgame" width="50px" height="auto">
                     <button id="ng-btn" class="btn-style">NEW GAME</button>
-                </col>
-            </div>
-            <div class="row py-1">
+                </div>
                 <div class="col">
-                    <h3 class="game-titles" id="playerVisual1">PLAYER 1</p>
+                    <img src="img/RollDice.png" alt="roll" width="50px" height="auto">
+                    <button id="roll-btn" class="btn-style">ROLL DICE</button>
+                </div>
+                <div class="col">
+                    <img src="img/Hold.png" alt="roll" width="50px" height="auto">
+                    <button id="hold-btn" class="btn-style">HOLD</button>
+                </div>
+            </div>
+            <div class="row py-3 align-items-center">
+                <div class="col">
+                    <h3 class="game-titles fw-bold" id="playerVisual1">PLAYER 1</p>
                     <p id="score-1">0</p>
                 </div>
                 <div class="col">
                     <img src="img/dice1.png" alt="dice" width="150" height="150" id="img-dice">
                 </div>
                 <div class="col">
-                    <h3 class="game-titles" id="playerVisual2">PLAYER 2</p>
+                    <h3 class="game-titles fw-bold" id="playerVisual2">PLAYER 2</p>
                     <p id="score-2">0</p>
                 </div>
             </div>
@@ -81,10 +89,6 @@
                 <div class="col game-font">
                     <h3 class="game-titles">CURRENT</p>
                     <p id="current-1">0</p>
-                </div>
-                <div class="col">
-                    <button id="roll-btn" class="btn-style">ROLL DICE</button>
-                    <button id="hold-btn" class="btn-style">HOLD</button>
                 </div>
                 <div class="col game-font">
                     <h3 class="game-titles">CURRENT</p>

@@ -39,6 +39,14 @@ ul, li {
     height: auto;
   }
 }
+@font-face {
+  font-family: "Lato";
+  src: local("Font/Lato/Lato-Regular.ttf") format("truetype");
+}
+body {
+  font-family: "Lato";
+}
+
 .border-c {
   border: 0.5rem outset rgb(200, 200, 200);
   box-shadow: 0 0 0 0.5rem rgb(220, 220, 220);
@@ -47,11 +55,9 @@ ul, li {
 
 .game-style {
   background-color: rgba(195, 0, 23, 0.2);
-  font-family: "Quicksand", sans-serif;
 }
 
 .game-titles {
-  font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
 }
 
@@ -61,7 +67,6 @@ ul, li {
   border-radius: 10px;
   border: 1px solid #ffffff;
   color: #ffffff;
-  font-family: "Quicksand", sans-serif;
   font-size: 18px;
   font-weight: bold;
   padding: 5px 10px;

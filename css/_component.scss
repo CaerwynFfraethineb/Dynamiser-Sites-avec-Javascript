@@ -1,9 +1,18 @@
 $border-color: rgb(200,200,200);
 $border-shadow-color: rgb(220,220,220);
 $game-color: rgba(195, 0, 23, 0.2);
-$game-font-family: 'Quicksand', sans-serif;
+$game-font-family: "Lato";
 $game-font-size: 1rem;
 $game-font-size-titles: 1.2rem;
+
+@font-face {
+	font-family: "Lato";
+	src: local("Font/Lato/Lato-Regular.ttf") format('truetype');
+} 
+
+body {
+	font-family: $game-font-family;
+}
 
 .border-c {
     border: 0.5rem outset $border-color;
@@ -13,11 +22,9 @@ $game-font-size-titles: 1.2rem;
 
 .game-style {
   background-color: $game-color;
-  font-family: $game-font-family;
 }
 
 .game-titles {
-  font-family: $game-font-family;
   font-size: $game-font-size-titles;
 }
 
@@ -27,7 +34,6 @@ $game-font-size-titles: 1.2rem;
 	border-radius:10px;
 	border:1px solid #ffffff;
 	color:#ffffff;
-	font-family: $game-font-family;
 	font-size:18px;
 	font-weight:bold;
 	padding:5px 10px;
